@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="BiblioBooking.master.cs" Inherits="BiblioBooking" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>BiblioBookign</title>
+    <script src="js/jquery-1.9.0.min.js"></script>
+    <script src="js/bootstrap/bootstrap.js" type="text/javascript"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.css"/>    
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css">
+    <style>
+	    body {
+		    padding-top: 60px;
+	    }
+	    .hero-unit{
+		    margin-left:230px;
+		    height:500px;
+		    padding:0;
+	    }
+	</style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a id="brand" class="brand" href="Principal.aspx">BiblioBooking</a>
+                <ul class="nav">
+                    <li class="active"><a href="Principal.aspx">Home</a></li>
+                    <li><a href="Login.aspx">Logoff</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <form id="form1" runat="server">
+    <div class="container">
+		<ul class="nav nav-tabs nav-stacked span2 affix">
+			<li><a href="ListaCursos.aspx">Cursos</a></li>
+			<li><a href="ListaTurmas.aspx">Turmas</a></li>
+			<li><a href="ListaAlunos.aspx">Alunos</a></li>
+			<li class="divider"><hr /></li>
+			<li><a href="ListaCategorias.aspx">Categorias</a></li>
+			<li><a href="ListaTipoLivros.aspx">Tipos</a></li>
+            <li><a href="ListaEditoras.aspx">Editoras</a></li>
+            <li><a href="ListaAutores.aspx">Autores</a></li>
+            <li><a href="ListaLivros.aspx">Livros</a></li>
+            <li class="divider"><hr /></li>
+            <li><a href="ListaReservas.aspx">Reservas</a></li>
+            <li><a href="ListaEmprestimo.aspx">Empréstimos</a></li>
+		</ul>
+        <div class="hero-unit">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            
+            </asp:ContentPlaceHolder>
+        </div>
+        <hr>
+        <footer>
+            <p>&copy; BiblioBooking 2013</p>
+        </footer>
+    </form>
+</body>
+</html>
